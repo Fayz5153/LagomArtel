@@ -1,0 +1,74 @@
+@font-face {
+  font-family: PP Neue Montreal;
+  src: url(../fonts/ppneuemontreal-book.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: PP Neue Montreal;
+  src: url(../fonts/ppneuemontreal-medium.otf);
+  font-weight: 500;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: PP Neue Montreal;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background: #E8EFFC;
+}
+body::-webkit-scrollbar {
+  width: 0.4em;
+  height: 0;
+}
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px #0060FE;
+  background: rgba(255, 255, 255, 0.7);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #0060FE;
+  border-radius: 2px;
+}
+.container{
+  max-width: 1920px;
+  margin: 0 auto;
+}
+a{
+  text-decoration: none;
+}
+button{
+  cursor: pointer;
+}
+// Loading
+.site__loading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #E8EFFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  padding: 10px;
+  p{
+    width: 1px;
+    height: 32px;
+    background: rgba(70, 68, 65, 0.20);
+  }
+  img, p{
+    animation: load 3s linear infinite alternate;
+  }
+}
+@keyframes load {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0.3;
+  }
+}
