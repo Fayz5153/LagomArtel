@@ -6,32 +6,165 @@
   <link rel="icon" href="./assets/Logo.svg">
   <title>ЛК / Авторизация</title>
   <link rel="stylesheet" href="./style/css/style.css">
+  <link rel="stylesheet" href="./style/css/Navbar.css">
+  <link rel="stylesheet" href="./style/css/Login.css">
+ <!-- Link Swiper's CSS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
 </head>
 <body>
-  <!-- Navbar Start -->
-  <div class="navbar">
-    <div class="logo">
-      <img src="./assets/logo1.png" alt="">
-      <p></p>
-      <img src="./assets/logo2.png" alt="">
-    </div>
-    <div class="nav">
-      <div>
-        <span>Техническая поддержка:</span>
-        <a href="tel:+7 (912) 999-99-99">+7 (912) 999-99-99</a>
+  <div class="container">
+    <!-- Navbar Start -->
+    <div class="navbar">
+      <a href="#" class="logo">
+        <img src="./assets/logo1.png" alt="">
+        <p class="nav__line"></p>
+        <img src="./assets/logo2.png" alt="">
+      </a>
+      <div class="nav">
+        <div class="link__desktop">
+          <span>Техническая поддержка:</span>
+          <a href="tel:+7 (912) 999 99 99">+7 (912) 999-99-99</a>
+        </div>
+        <a href="tel:+7 (912) 999 99 99" class="link__mobile"><img src="./assets/icons/call.svg" alt=""></a>
+        <a href="#" target="_blank"><img src="./assets/icons/telegram.png" alt=""></a>
+        <a href="#" target="_blank"><img src="./assets/icons/whatsapp.png" alt=""></a>
+        <p class="nav__line"></p>
+        <a href="mailto: sale@sale.ru" class="link__mobile" style="height: 26px;"><img src="./assets/icons/mail.svg" alt=""></a>
+        <a href="mailto: sale@sale.ru" class="link__desktop">sale@sale.ru</a>
       </div>
-      <a href=""></a>
-
     </div>
-  </div>
-  <!-- Navbar End -->
-  
+    <!-- Navbar End -->
+    <!-- Login Form Start -->
+    <div class="login__form__container">
+      <div class="login__slider">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
 
+            <div class="swiper-slide">
+              <div class="login__card">
+                <img src="./assets/img/slider_img.webp" alt="">
+                <div class="login__card__content">
+                  <p class="login__card__title">Проект Лагом 1</p>
+                  <p class="login__card__description">
+                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                  </p>
+                  <a href="#">Перейти к подбору</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="login__card">
+                <img src="./assets/img/slider_img.webp" alt="">
+                <div class="login__card__content">
+                  <p class="login__card__title">Проект Лагом 2</p>
+                  <p class="login__card__description">
+                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                  </p>
+                  <a href="#">Перейти к подбору</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="login__card">
+                <img src="./assets/img/slider_img.webp" alt="">
+                <div class="login__card__content">
+                  <p class="login__card__title">Проект Лагом 3</p>
+                  <p class="login__card__description">
+                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                  </p>
+                  <a href="#">Перейти к подбору</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="login__card">
+                <img src="./assets/img/slider_img.webp" alt="">
+                <div class="login__card__content">
+                  <p class="login__card__title">Проект Лагом 4</p>
+                  <p class="login__card__description">
+                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                  </p>
+                  <a href="#">Перейти к подбору</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="slider__info">
+            Вас могут заинтересовать эти проекты
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+
+        </div>
+      </div>
+      <!-- add id " phone__error " for error phone -->
+      <div class="login__form" id="">
+        <form action="">
+          <p class="login__form__title">Личный кабинет</p>
+          <p class="login__form__description">
+            Зарегистрируйтесь/Войдите по номеру телефона и получите доступ к личному кабинету
+          </p>
+          <div class="login__form__input">
+            <p>Номер телефона</p>
+            <input type="number">
+            <p class="c_red">Ошибка. Введите номер телефона</p>
+          </div>
+          <button>Войти</button>
+          <p class="login__form__info">
+            Нажимая на кнопку, вы принимаете политику конфиденциальности и даете согласие на 
+            <span>обработку персональных данных.</span>
+          </p>
+        </form>
+      </div>
+    </div>
+    <!-- Login Form End -->
+  </div>
 
   <!-- <div class="site__loading">
     <img src="./assets/logo1.png" alt="">
     <p></p>
     <img src="./assets/logo2.png" alt="">
   </div> -->
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      // effect: "cards",
+      grabCursor: true,
+      effect: "creative",
+      creativeEffect: {
+        limitProgress:2,
+        prev: {
+          shadow: true,
+          translate: [0, -30, -100],
+          // scale: 2,
+          opacity:0.7
+        },
+        next: {
+          shadow: true,
+          translate: [0, -30, -100],
+          scale: 0.99,
+          opacity:0.7
+        },
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
 </body>
 </html>

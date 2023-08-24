@@ -41,16 +41,19 @@ body::-webkit-scrollbar-thumb {
 }
 
 .container {
-  max-width: 1920px;
+  max-width: 1440px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 a {
   text-decoration: none;
+  cursor: url(../../assets/icons/cursor.png), pointer;
 }
 
 button {
   cursor: pointer;
+  cursor: url(../../assets/icons/cursor.png), pointer;
 }
 
 .site__loading {
@@ -71,10 +74,11 @@ button {
           justify-content: center;
   gap: 64px;
   padding: 10px;
+  z-index: 1000;
 }
 .site__loading p {
-  width: 1px;
   height: 32px;
+  width: 1px;
   background: rgba(70, 68, 65, 0.2);
 }
 .site__loading img, .site__loading p {
@@ -98,5 +102,23 @@ button {
   }
   to {
     opacity: 1;
+  }
+}
+@media (max-width: 570px) {
+  .site__loading {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+  }
+  .site__loading p {
+    width: 70%;
+    height: 1px;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    padding: 0 20px;
   }
 }

@@ -1,0 +1,139 @@
+@mixin line {
+  width: 1px;
+  background: rgba(70, 68, 65, 0.20);
+}
+@mixin flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 40px;
+  .logo{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    img:nth-child(1){
+      max-height: 41px;
+    }
+    img:nth-child(3){
+      max-height: 26px;
+    }
+  }
+  .nav__line{
+    @include line();
+    height: 16px;
+  }
+  .nav{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    a{
+      color: #464441;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      @include flex_center();
+      height: 24px;
+      img{
+        width: auto;
+        height: 100%;
+      }
+    }
+    div{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+  .link__mobile{
+    display: none !important;
+  }
+}
+
+@media (max-width:1024px) {
+  .navbar{
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media (max-width:650px) {
+  .navbar{
+    flex-direction: row;
+    .link__mobile{
+      display: flex !important;
+    }
+    .link__desktop{
+      display: none !important; 
+    }
+    .nav{
+      &__line{
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width:570px) {
+  .navbar{
+    .logo{
+      img:nth-child(1){
+        max-height: 41px;
+        width: 120px;
+      }
+      img:nth-child(3){
+        max-height: 26px;
+        width: 60px;
+      }
+    }
+  }
+}
+@media (max-width:500px) {
+  .container{
+    padding: 0 20px;
+  }
+  .navbar{
+    gap: 20px;
+    .logo{
+      gap: 15px;
+    }
+    .nav{
+      gap: 15px;
+    }
+  }
+}
+
+@media (max-width:425px) {
+  .navbar{
+    gap: 15px;
+    .logo{
+      img:nth-child(1){
+        width: 100px;
+      }
+      img:nth-child(3){
+        width: 50px;
+      }
+    }
+    .nav{
+      gap: 10px;
+      .logo{
+        gap: 10px;
+      }
+      a{
+        width: 20px;
+        height: 20px !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,352 @@
+@mixin flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Login Form Start
+.login__form__container{
+  display: grid;
+  grid-template-columns: 1fr 416px;
+  gap: 64px;
+  width: 100%;
+  margin-top: 80px;
+  max-width: 1440px;
+  padding: 0 52px 60px 52px;
+}
+.login__slider{
+  width: 100%;
+  position: relative;
+  .mySwiper{
+    position: absolute;
+    width: 100%;
+    height: 534px;
+    max-width: 736px;
+    padding-top: 20px;
+    padding-bottom: 56px;
+  }
+  .swiper-slide-shadow{
+    background: white !important;
+    border-radius: 24px;
+  }
+  .swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 24px;
+    padding: 1px 0 0 0px;
+  }
+  .swiper-button-next, .swiper-button-prev{
+    top: auto;
+    bottom: 0; 
+    left: auto;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    border: 1px solid rgba(70, 68, 65, 0.16);
+    z-index: 11;
+    &::after{
+      font-size: 14px;
+      font-weight: 700;
+      width: 14px;
+      @include flex_center();
+    }
+  }
+  .swiper-button-prev{
+    right: 48px;
+  }
+  .swiper-pagination-bullet{
+    background: #0060FE;
+    width: 14px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 0 2px !important;
+  }
+  .slider__info{
+    margin-top: 20px;
+    color: rgba(70, 68, 65, 0.40);
+    font-family: PP Neue Montreal;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    max-width: 150px;
+  }
+}
+.login__card{
+  border-radius: 24px;
+  background: #FFF;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+  &__title{
+    color: #464441;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  &__description{
+    color: rgba(70, 68, 65, 0.60);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  &__content{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 100%;
+    gap: 24px;
+  }
+  a{
+    color: var(--base-white, #FFF);
+    font-family: PP Neue Montreal;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px; /* 100% */
+    text-transform: uppercase;
+    width: 100%;
+    height: 46px;
+    border-radius: 100px;
+    background: #0060FE;
+    @include flex_center();
+  }
+  img{
+    height: 100%;
+    width: 100%;
+    max-width: 350px;
+    object-fit: cover;
+    border-radius: 24px; 
+  }
+}
+.login__form{
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  border-radius: 24px;
+  background: #FFF;
+  max-width: 416px;
+  height: 458px;
+  margin-top: 20px;
+  &__title{
+    color: #464441;
+    font-variant-numeric: ordinal;
+    font-feature-settings: 'dlig' on, 'ss01' on, 'liga' off;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+    margin-bottom: 24px;
+  }
+  &__description{
+    color: rgba(70, 68, 65, 0.60);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    margin-bottom: 40px;
+  }
+  &__input{
+    margin-bottom: 50px;
+    p{
+      color: rgba(70, 68, 65, 0.60);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 2px;
+    }
+    .c_red{
+      display: none;
+      margin-top: 8px;
+      color: #EB001B;
+    }
+    input{
+      border-radius: 8px;
+      background: #E8EFFC;
+      width: 100%;
+      border: 1px solid #E8EFFC;
+      outline: none;
+      height: 48px;
+      padding: 0 10px;
+      color: #464441;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      &:-internal-autofill-selected{
+        background-color: white !important;
+      }
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+  button{
+    border-radius: 100px;
+    background: #E8EFFC;
+    width: 100%;
+    height: 46px;
+    margin-bottom: 8px;
+    border: none;
+    pointer-events: none;
+    color: #C0C6D1;
+    font-family: PP Neue Montreal;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px; /* 100% */
+    text-transform: uppercase;
+  }
+  &__info{
+    color: rgba(70, 68, 65, 0.40);
+    font-family: PP Neue Montreal;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    span{
+      color: rgba(70, 68, 65, 1);
+    }
+  }
+}
+#phone__error{
+  input{
+    border-color: #EB001B;
+  }
+  .c_red{
+    display: block;
+  }
+  button{
+    background: #0060FE;
+    pointer-events: all;
+    color: #FFF;
+  }
+}
+// Login Form End
+
+
+@media (max-width:1290px) {
+  .login__form__container{
+    padding: 0 0px 60px 0px;
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+  }
+  .login__card__content{
+    padding: 30px;
+  }
+  .login__form{
+    width: 380px;
+    padding: 30px;
+  }
+}
+@media (max-width:1100px) {
+  .login__form__container{
+    grid-template-columns: 1fr;
+    margin-top: 60px;
+  }
+  .login__slider{
+    height: 534px;
+    .mySwiper{
+      max-width: 100%;
+    }
+  }
+  .login__card{
+    grid-template-columns: 350px auto;
+  }
+  .login__form{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    height: auto;
+    form{
+      max-width: 380px;
+    }
+  }
+}
+@media (max-width:768px) {
+  .login__form__container{
+    margin-top: 40px;
+  }
+  .login__card{
+    grid-template-columns: 280px auto;
+    img{
+      width: 100%;
+    }
+    &__content{
+      gap: 15px;
+    }
+  }
+  .login__slider{
+    height: 470px;
+    .mySwiper{
+      height: 100%;
+    }
+  }
+}
+@media (max-width:680px) {
+  .login__form__container{
+    display: block;
+  }
+  .login__slider{
+    margin-bottom: 30px;
+    height: auto;
+    .mySwiper{
+      position: relative;
+      padding-bottom: 15px;
+    }
+  }
+  .login__card{
+    grid-template-columns: 1fr;
+    img{
+      height: 250px;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+@media (max-width:500px) {
+  .login__form__container{
+    margin-top: 20px;
+  }
+  .login__card{
+    img{
+      height: 200px;
+    }
+    &__content{
+      padding: 20px;
+    }
+  }
+  .login__slider{
+    .mySwiper{
+      padding-bottom: 0;
+    }
+    .swiper-button-next, .swiper-button-prev{
+      width: 30px;
+      height: 30px;
+      &::after{
+        font-size: 12px;
+      }
+    }
+    .swiper-pagination{
+      display: none;
+    }
+  }
+  .login__form{
+    margin-top: 30px;
+  }
+}
