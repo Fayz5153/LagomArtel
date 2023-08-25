@@ -260,7 +260,7 @@
 }
 .direction__item:hover{
   .direction__hover{
-    animation-name: out_right;
+    animation-name: out_left;
   }
 }
 .direction__hover{
@@ -270,12 +270,13 @@
   background: #0060FE;
   top: 0;
   left: 0;
-  transform-origin: 100% 0%;
-  animation: 500ms ease 0ms 1 normal forwards running enter_right;
+  transform-origin: 0% 0%;
+  animation: 500ms ease 0ms 1 normal forwards running enter_left;
+  opacity: 0;
   display: flex;
   padding: 24px;
   gap: 70px;
-  transform: rotate3d(1,0,0, 90deg);
+  transform: rotate3d(0, 1, 0, 2.03444rad);
   .dh__title{
     color: #FFF;
     font-size: 48px;
@@ -315,24 +316,28 @@
     justify-content: space-between;
   }
 }
-@keyframes enter_right {
+@keyframes enter_left {
   0% {
     visibility: visible;
     transform: rotate3d(0, 0, 0, 0deg);
+    opacity: 1;
   }
   100% {
     visibility: hidden;
-    transform: rotate3d(0, -1, 0, 2.03444rad);
+    transform: rotate3d(0, 1, 0, 2.03444rad);
+    opacity: 0;
   }
 }
-@keyframes out_right {
+@keyframes out_left {
   0% {
     visibility: hidden;
-    transform: rotate3d(0, -1, 0, 2.03444rad);
+    transform: rotate3d(0, 1, 0, 2.03444rad);
+    opacity: 0;
   }
   100% {
     visibility: visible;
     transform: rotate3d(0, 0, 0, 0deg);
+    opacity: 1;
   }
 }
 

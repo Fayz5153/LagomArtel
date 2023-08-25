@@ -335,8 +335,8 @@
 }
 
 .direction__item:hover .direction__hover {
-  -webkit-animation-name: out_right;
-          animation-name: out_right;
+  -webkit-animation-name: out_left;
+          animation-name: out_left;
 }
 
 .direction__hover {
@@ -346,17 +346,18 @@
   background: #0060FE;
   top: 0;
   left: 0;
-  -webkit-transform-origin: 100% 0%;
-          transform-origin: 100% 0%;
-  -webkit-animation: 500ms ease 0ms 1 normal forwards running enter_right;
-          animation: 500ms ease 0ms 1 normal forwards running enter_right;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-animation: 500ms ease 0ms 1 normal forwards running enter_left;
+          animation: 500ms ease 0ms 1 normal forwards running enter_left;
+  opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 24px;
   gap: 70px;
-  -webkit-transform: rotate3d(1, 0, 0, 90deg);
-          transform: rotate3d(1, 0, 0, 90deg);
+  -webkit-transform: rotate3d(0, 1, 0, 2.03444rad);
+          transform: rotate3d(0, 1, 0, 2.03444rad);
 }
 .direction__hover .dh__title {
   color: #FFF;
@@ -410,53 +411,61 @@
           justify-content: space-between;
 }
 
-@-webkit-keyframes enter_right {
+@-webkit-keyframes enter_left {
   0% {
     visibility: visible;
     -webkit-transform: rotate3d(0, 0, 0, 0deg);
             transform: rotate3d(0, 0, 0, 0deg);
+    opacity: 1;
   }
   100% {
     visibility: hidden;
-    -webkit-transform: rotate3d(0, -1, 0, 2.03444rad);
-            transform: rotate3d(0, -1, 0, 2.03444rad);
+    -webkit-transform: rotate3d(0, 1, 0, 2.03444rad);
+            transform: rotate3d(0, 1, 0, 2.03444rad);
+    opacity: 0;
   }
 }
 
-@keyframes enter_right {
+@keyframes enter_left {
   0% {
     visibility: visible;
     -webkit-transform: rotate3d(0, 0, 0, 0deg);
             transform: rotate3d(0, 0, 0, 0deg);
+    opacity: 1;
   }
   100% {
     visibility: hidden;
-    -webkit-transform: rotate3d(0, -1, 0, 2.03444rad);
-            transform: rotate3d(0, -1, 0, 2.03444rad);
+    -webkit-transform: rotate3d(0, 1, 0, 2.03444rad);
+            transform: rotate3d(0, 1, 0, 2.03444rad);
+    opacity: 0;
   }
 }
-@-webkit-keyframes out_right {
+@-webkit-keyframes out_left {
   0% {
     visibility: hidden;
-    -webkit-transform: rotate3d(0, -1, 0, 2.03444rad);
-            transform: rotate3d(0, -1, 0, 2.03444rad);
+    -webkit-transform: rotate3d(0, 1, 0, 2.03444rad);
+            transform: rotate3d(0, 1, 0, 2.03444rad);
+    opacity: 0;
   }
   100% {
     visibility: visible;
     -webkit-transform: rotate3d(0, 0, 0, 0deg);
             transform: rotate3d(0, 0, 0, 0deg);
+    opacity: 1;
   }
 }
-@keyframes out_right {
+@keyframes out_left {
   0% {
     visibility: hidden;
-    -webkit-transform: rotate3d(0, -1, 0, 2.03444rad);
-            transform: rotate3d(0, -1, 0, 2.03444rad);
+    -webkit-transform: rotate3d(0, 1, 0, 2.03444rad);
+            transform: rotate3d(0, 1, 0, 2.03444rad);
+    opacity: 0;
   }
   100% {
     visibility: visible;
     -webkit-transform: rotate3d(0, 0, 0, 0deg);
             transform: rotate3d(0, 0, 0, 0deg);
+    opacity: 1;
   }
 }
 @media (max-width: 1250px) {
