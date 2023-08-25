@@ -56,11 +56,104 @@
   }
 }
 
+.footer__container{
+  border-radius: 24px 24px 0px 0px;
+  background: linear-gradient(180deg, #0060FE 0%, rgba(0, 96, 254, 0.80) 100%);
+}
+.footer{
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  &__left{
+    display: flex;
+    flex-direction: column;
+    p{
+      color: #FFF;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 16px;
+    }
+    a{
+      color: rgba(255, 255, 255, 0.60);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 8px;
+    }
+  }
+  &__center{
+    p{
+      color: rgba(255, 255, 255, 0.60);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      max-width: 115px;
+      margin-bottom: 16px;
+    }
+    .cards{
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      img{
+        padding: 8px;
+        border-radius: 8px;
+        background: #FFF;
+      }
+    }
+  }
+  &__right{
+    p{
+      color: #FFF;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 19px;
+      text-align: right;
+    }
+  }
+  .nav__line{
+    background: rgba(255, 255, 255, 0.20);
+    height: 12px;
+    width: 1px;
+  }
+  &__links{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    a{
+      color: rgba(255, 255, 255, 0.60);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+}
+
 @media (max-width:1024px) {
   .navbar{
     flex-direction: column;
     gap: 25px;
     margin-top: 30px;
+  }
+}
+@media (max-width:850px) {
+  .footer{
+    flex-wrap: wrap;
+    gap: 24px;
+    &__left,&__center,&__right{
+      flex-grow: 1;
+    }
+    &__center,&__right{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
 @media (max-width: 768px) {
@@ -112,6 +205,9 @@
       gap: 15px;
     }
   }
+  .footer{
+    padding: 25px;
+  }
 }
 
 @media (max-width:425px) {
@@ -133,6 +229,21 @@
       a{
         width: 20px;
         height: 20px !important;
+      }
+    }
+  }
+  .footer{
+    padding: 25px 0px;
+    &__left,&__center,&__right{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    &__links{
+      flex-wrap: wrap;
+      gap: 10px;
+      .nav__line{
+        display: none;
       }
     }
   }
