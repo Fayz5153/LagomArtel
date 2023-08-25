@@ -1,3 +1,26 @@
+.load__off {
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+  -webkit-animation-name: d_none;
+          animation-name: d_none;
+  -webkit-animation-duration: 0s;
+          animation-duration: 0s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes d_none {
+  100% {
+    display: none;
+  }
+}
+
+@keyframes d_none {
+  100% {
+    display: none;
+  }
+}
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;

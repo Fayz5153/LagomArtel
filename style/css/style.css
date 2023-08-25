@@ -75,6 +75,8 @@ button {
   gap: 64px;
   padding: 10px;
   z-index: 1000;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
 }
 .site__loading p {
   height: 32px;
