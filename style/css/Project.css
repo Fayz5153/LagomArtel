@@ -35,8 +35,14 @@
   line-height: normal;
   text-transform: uppercase;
   border: none;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
 }
 .project__filter .pf__btn.active {
+  background: #0060FE;
+  color: white;
+}
+.project__filter .pf__btn:hover {
   background: #0060FE;
   color: white;
 }
@@ -86,7 +92,7 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 8px;
+  gap: 4px;
   margin-bottom: 24px;
 }
 .project__card__status p {
@@ -101,9 +107,14 @@
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   padding: 5px 8px;
+  -webkit-transition: background 0.3s linear;
+  transition: background 0.3s linear;
 }
 .project__card__status p.vputi {
   background: #0060FE;
+}
+.project__card__status p.vputi:hover {
+  background: #0055E1;
 }
 .project__card__status button {
   color: #FFF;
@@ -125,6 +136,11 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 4px;
+  -webkit-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+.project__card__status button:hover {
+  background: #0055E1;
 }
 .project__card__text {
   display: -webkit-box;
@@ -188,6 +204,12 @@
   border-radius: 100px;
   background: #0060FE;
   padding: 18px 24px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+.no__project a:hover {
+  background: #0055E1;
+  color: white;
 }
 
 .directions__container {
@@ -231,7 +253,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 24px;
-  cursor: url(../../assets/icons/cursor.png), pointer;
+  cursor: url(../../assets/icons/cursor.svg), pointer;
 }
 .direction__item b {
   color: #FFF;
@@ -386,7 +408,6 @@
   text-transform: uppercase;
   height: 48px;
   border-radius: 100px;
-  background: #FFF;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -397,6 +418,15 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-shadow: 0 0 40px 40px #fff inset, 0 0 0 0 #fff;
+          box-shadow: 0 0 40px 40px #fff inset, 0 0 0 0 #fff;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+.direction__hover a:hover {
+  -webkit-box-shadow: 0 0 5px 2px #fff inset, 0 0 5px 4px #fff;
+          box-shadow: 0 0 5px 2px #fff inset, 0 0 5px 4px #fff;
+  color: white;
 }
 .direction__hover div {
   display: -webkit-box;

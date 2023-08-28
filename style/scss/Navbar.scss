@@ -53,6 +53,10 @@
       line-height: normal;
       @include flex_center();
       height: 24px;
+      transition: 0.1s linear;
+      &:hover{
+        color: #6e6b67;
+      }
       img{
         width: auto;
         height: 100%;
@@ -95,6 +99,10 @@
       font-weight: 400;
       line-height: normal;
       margin-bottom: 8px;
+      transition: 0.3s linear;
+      &:hover{
+        transform: translateX(10px);
+      }
     }
   }
   &__center{
@@ -144,6 +152,10 @@
       font-style: normal;
       font-weight: 500;
       line-height: normal;
+      transition: 0.3s linear;
+      &:hover{
+        transform: scale(1.04);
+      }
     }
   }
 }

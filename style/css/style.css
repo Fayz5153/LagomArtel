@@ -48,12 +48,12 @@ body::-webkit-scrollbar-thumb {
 
 a {
   text-decoration: none;
-  cursor: url(../../assets/icons/cursor.png), pointer;
+  cursor: url(../../assets/icons/cursor.svg), pointer;
 }
 
 button {
   cursor: pointer;
-  cursor: url(../../assets/icons/cursor.png), pointer;
+  cursor: url(../../assets/icons/cursor.svg), pointer;
 }
 
 .site__loading {

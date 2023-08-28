@@ -121,6 +121,10 @@
     border-radius: 100px;
     background: #0060FE;
     @include flex_center();
+    transition: background 0.3s linear;
+    &:hover{
+      background: #0055E1;
+    }
   }
   img{
     height: 100%;
@@ -213,6 +217,13 @@
     &:disabled{
       color: #C0C6D1;
       background: #E8EFFC;
+      &:hover{
+        background: #E8EFFC;
+      }
+    }
+    transition: background 0.3s linear;
+    &:hover{
+      background: #0055E1;
     }
   }
   &__info{

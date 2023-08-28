@@ -143,6 +143,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+.login__card a:hover {
+  background: #0055E1;
 }
 .login__card img {
   height: 100%;
@@ -240,10 +245,18 @@
   text-transform: uppercase;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
+  -webkit-transition: background 0.3s linear;
+  transition: background 0.3s linear;
 }
 .login__form button:disabled {
   color: #C0C6D1;
   background: #E8EFFC;
+}
+.login__form button:disabled:hover {
+  background: #E8EFFC;
+}
+.login__form button:hover {
+  background: #0055E1;
 }
 .login__form__info {
   color: rgba(70, 68, 65, 0.4);

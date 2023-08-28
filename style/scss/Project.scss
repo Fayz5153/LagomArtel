@@ -27,7 +27,12 @@
     line-height: normal;
     text-transform: uppercase;
     border: none;
+    transition: 0.3s linear;
     &.active{
+      background: #0060FE;
+      color: white;
+    }
+    &:hover{
       background: #0060FE;
       color: white;
     }
@@ -65,7 +70,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 4px;
     margin-bottom: 24px;
     p{
       color: #FFF;
@@ -78,8 +83,12 @@
       background: #50B402;
       backdrop-filter: blur(10px);
       padding: 5px 8px;
+      transition: background 0.3s linear;
       &.vputi{
         background: #0060FE;
+        &:hover{
+          background: #0055E1;
+        }
       }
     }
     button{
@@ -97,6 +106,10 @@
       display: flex;
       align-items: center;
       gap: 4px;
+      transition: background 0.3s linear;
+      &:hover{
+        background: #0055E1;
+      }
     }
   }
   &__text{
@@ -146,6 +159,11 @@
     border-radius: 100px;
     background: #0060FE;
     padding: 18px 24px;
+    transition: 0.3s linear;
+    &:hover{
+      background: #0055E1;
+      color: white;
+    }
   }
 }
 .directions__container{
@@ -181,7 +199,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 24px;
-  cursor: url(../../assets/icons/cursor.png), pointer;
+  cursor: url(../../assets/icons/cursor.svg), pointer;
   // perspective: 400px;
   b{
     color: #FFF;
@@ -304,11 +322,17 @@
     text-transform: uppercase;
     height: 48px;
     border-radius: 100px;
-    background: #FFF;
+    // background: #FFF;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0 40px 40px #fff inset, 0 0 0 0 #fff;
+    transition: 0.2s linear ;
+    &:hover{
+      box-shadow: 0 0 5px 2px #fff inset, 0 0 5px 4px #fff;
+      color: white;
+    }
   }
   div{
     display: flex;
