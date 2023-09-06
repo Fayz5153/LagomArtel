@@ -18,16 +18,18 @@ const login__form = document.querySelector(".login__form")
 
 let phone = 12345
 
-number_input.oninput = (e) =>{
-  // console.log(e.target.value)
-  if (e.target.value != "") {
-    login__btn.disabled = false
-  } else{
-    login__btn.disabled = true
-  }
-  if (e.target.value == phone) {
-    login__form.setAttribute("id", "phone__error")
-  } else {
-    login__form.setAttribute("id", "")
+if (number_input) {
+  number_input.oninput = (e) =>{
+    // console.log(e.target.value)
+    if (e.target.value != "") {
+      login__btn.disabled = false
+    } else{
+      login__btn.disabled = true
+    }
+    if (e.target.value == phone) {
+      login__form.setAttribute("id", "phone__error")
+    } else {
+      login__form.setAttribute("id", "")
+    }
   }
 }
